@@ -1,0 +1,39 @@
+{
+  "appId": "com.flowcode.app",
+  "productName": "Flowcode",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "electron/**/*",
+    "out/**/*",
+    "public/**/*",
+    "package.json"
+  ],
+  "asar": false,
+  "extraMetadata": {
+    "main": "electron/main.js"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      },
+      {
+        "target": "dir",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "src/app/favicon.ico",
+    "signAndEditExecutable": false,
+    "signDlls": false,
+    "requestedExecutionLevel": "asInvoker"
+  },
+  "portable": {
+    "artifactName": "Flowcode-Portable-${version}.exe"
+  },
+  "electronDownload": {
+    "cache": "./electron-cache"
+  }
+}
